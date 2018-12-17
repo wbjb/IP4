@@ -9,97 +9,76 @@ player2.score = 0
 
 
 
-var cmpttrs = [player1, player2]
-isPlaying = cmpttrs[0]
+
+isPlaying = player1
 
 storedPoints1 = 0
 storedPoints2 = 0
-console.log(toString(isPlaying))
 
 
 $(document).ready(function() {
-	if (isPlaying == player1){
-		$("#roll").click(function(){
-			dices = Math.floor(Math.random() * (6 - 1)) + 1*1;
+	$("#roll").click(function(){
+		dices = Math.floor(Math.random() * (6 - 1)) + 1*1;
+		$("#diceoutput").text(dices)
     	alert(dices)
-			storedPoints1=storedPoints1+dices
+		storedPoints1+=dices
+
+
+ 	if (dices == 1){
+    	storedPoints1 = 0
+		isPlaying = player2
+		console.log("uh oh pass your turn noob")
+
+		}
 
 	});
    $("#pass").click(function(){
    		player1.score+=storedPoints1
     	storedPoints1 = 0
-      isPlaying = player2
+      	$("#output").text(player1.score)
    	});
-	 if (dices == 1){
-    storedPoints1-=1
-			isPlaying = player2
-			console.log("uh oh pass your turn noob")
 
-		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	$("#roll2").click(function(){
+		dices2 = Math.floor(Math.random() * (6 - 1)) + 1*1;
+		$("#diceoutput2").text(dices2)
+		alert(dices2)
+		storedPoints2+=dices2
+
+	if (dices2 == 1){
+		console.log("uh oh pass your turn noob")
+		storedPoints2 = 0
+		isPlaying = player1
+
 	}
+
+		});
+	$("#pass2").click(function(){
+		player2.score+=storedPoints2
+		storedPoints2 = 0
+		$("#output2").text(player2.score)
+		});
+
   
-	});
-
-	$("#plr1").click(function(){
-		alert(player1.score)
-	});
-	$("#plr2").click(function(){
-		alert(player2.score)
-	});
-
-
-
-
-
-
-
-function players(score){
-  this.score = score
-}
-player1 = new players
-player1.score = 0
-player2 = new players
-player2.score = 0
-
-
-
-
-var cmpttrs = [player1, player2]
-isPlaying = cmpttrs[0]
-
-storedPoints1 = 0
-storedPoints2 = 0
-console.log(toString(isPlaying))
-
-
-$(document).ready(function() {
-	if (isPlaying == player1){
-		$("#roll").click(function(){
-			dices = Math.floor(Math.random() * (6 - 1)) + 1*1;
-    	alert(dices)
-			storedPoints1=storedPoints1+dices
-
-	});
-   $("#pass").click(function(){
-   		player1.score+=storedPoints1
-    	storedPoints1 = 0
-      isPlaying = player2
-   	});
-	 if (dices == 1){
-    storedPoints1-=1
-			isPlaying = player2
-			console.log("uh oh pass your turn noob")
-
-		}
-	}
-  
-	});
-
-	$("#plr1").click(function(){
-		alert(player1.score)
-	});
-	$("#plr2").click(function(){
-		alert(player2.score)
 	});
 
 
