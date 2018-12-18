@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 	});
    $("#pass").click(function(){
-   	alert("pass your turn")
+   	alert("you pass your turn")
    		player1.score+=storedPoints1
     	storedPoints1 = 0
       	$("#output").text(player1.score)
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 		});
 	$("#pass2").click(function(){
-		alert("pass your turn")
+		alert("you pass your turn")
 		player2.score+=storedPoints2
 		storedPoints2 = 0
 		$("#output2").text(player2.score)
