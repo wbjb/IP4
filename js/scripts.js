@@ -27,34 +27,17 @@ $(document).ready(function() {
  	if (dices == 1){
     	storedPoints1 = 0
 		isPlaying = player2
-		console.log("uh oh pass your turn noob")
+		alert("uh oh pass your turn")
 
 		}
 
 	});
    $("#pass").click(function(){
+   	alert("pass your turn")
    		player1.score+=storedPoints1
     	storedPoints1 = 0
       	$("#output").text(player1.score)
    	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -65,7 +48,7 @@ $(document).ready(function() {
 		storedPoints2+=dices2
 
 	if (dices2 == 1){
-		console.log("uh oh pass your turn noob")
+		alert("uh oh pass your turn noob")
 		storedPoints2 = 0
 		isPlaying = player1
 
@@ -73,6 +56,7 @@ $(document).ready(function() {
 
 		});
 	$("#pass2").click(function(){
+		alert("pass your turn")
 		player2.score+=storedPoints2
 		storedPoints2 = 0
 		$("#output2").text(player2.score)

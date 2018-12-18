@@ -19,7 +19,11 @@ PIG DICE
 
 In this Pig Dice project, you will have 'player 1' and 'player2' along with buttons in which the rules are not programmed, only by human interaction and decision making can the game be played.
 
+## Specifications
 
+One of the players will click on their respective buttons. If roll is clicked, the program will roll the dice. If it
+is above 1, the player will keep that score and it will get added to his total accumulated score and also allowed to continue rolling as long as he does not strike 1. If he does, he loses the score that has accumulated for him and his turn is passed
+to the other player. 
 
 ## Deployment
 
