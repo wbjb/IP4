@@ -20,7 +20,6 @@ $(document).ready(function() {
 	$("#roll").click(function(){
 		dices = Math.floor(Math.random() * (6 - 1)) + 1*1;
 		$("#diceoutput").text(dices)
-    	alert(dices)
 		storedPoints1+=dices
 
 
@@ -44,7 +43,6 @@ $(document).ready(function() {
 	$("#roll2").click(function(){
 		dices2 = Math.floor(Math.random() * (6 - 1)) + 1*1;
 		$("#diceoutput2").text(dices2)
-		alert(dices2)
 		storedPoints2+=dices2
 
 	if (dices2 == 1){
