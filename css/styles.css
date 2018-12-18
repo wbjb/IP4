@@ -3,6 +3,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	padding:35px;
 
 }
 .box {
@@ -13,7 +14,12 @@ body {
 }
 
 h2 {
-	color: white;
+	background-color: violet;
+	padding-right: 22px;
+	 margin: 15px;
+	color: silver;
+	font-size: 45px;
+	float: right;
 }
 p {
 	color: white;
